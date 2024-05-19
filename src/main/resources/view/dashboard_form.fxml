@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootNode" prefHeight="630.0" prefWidth="1108.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studio.controller.DashboardFormController">
+    <children>
+      <Pane fx:id="paneHolder" layoutX="300.0" layoutY="100.0" prefHeight="530.0" prefWidth="808.0">
+         <children>
+            <ImageView fitHeight="606.0" fitWidth="853.0" layoutY="-75.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/S12.jpg" />
+               </image>
+            </ImageView>
+            <Pane id="DASHBOARD  HEAD" layoutX="447.0" layoutY="27.0" prefHeight="130.0" prefWidth="260.0" style="-fx-background-color: FFF4DE;">
+               <children>
+                  <Label layoutX="17.0" layoutY="65.0" prefHeight="36.0" prefWidth="173.0" text="Total Booking">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icon/Total%20Icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblBookingCount" layoutX="77.0" layoutY="17.0" text="29">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="99.0" text="0.8  % from yesterday" textFill="#0b46bc" />
+               </children>
+            </Pane>
+            <Pane id="DASHBOARD  HEAD" layoutX="96.0" layoutY="27.0" prefHeight="130.0" prefWidth="260.0" style="-fx-background-color: FC9AC2;">
+               <children>
+                  <Label layoutX="17.0" layoutY="65.0" prefHeight="36.0" prefWidth="148.0" text="Total Client">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icon/New%20CIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblClientCount" layoutX="78.0" layoutY="16.0" text="29">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="99.0" text="0.8  % from yesterday" textFill="#0b46bc" />
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="567.0" layoutY="192.0" onAction="#btnPackageOnAction" prefHeight="120.0" prefWidth="140.0" style="-fx-background-color: #3498db;" text="Packages" textFill="WHITE">
+               <graphic>
+                  <ImageView blendMode="MULTIPLY" fitHeight="63.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icon/S12.jpeg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="329.0" layoutY="192.0" onAction="#btnBookingOnAction" prefHeight="120.0" prefWidth="140.0" style="-fx-background-color: #e67e22;" text="Bookings" textFill="WHITE">
+               <graphic>
+                  <ImageView blendMode="MULTIPLY" fitHeight="63.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icon/booking.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="96.0" layoutY="192.0" onAction="#btnClientOnAction" prefHeight="120.0" prefWidth="140.0" style="-fx-background-color: #2ecc71;" text="Clients" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="63.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icon/customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="149.0" fitWidth="248.0" layoutX="99.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/Bookings.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="149.0" fitWidth="241.0" layoutX="466.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/Clients.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="300.0" prefHeight="100.0" prefWidth="808.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Label fx:id="txtTime" alignment="CENTER" layoutX="491.0" layoutY="14.0" prefHeight="30.0" prefWidth="148.0" text="22 : 00 : 13">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtDate" alignment="CENTER" layoutX="490.0" layoutY="50.0" prefHeight="36.0" prefWidth="148.0" text="2023/11/10" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="71.0" fitWidth="327.0" layoutX="77.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/Art%20N%20Pix.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="630.0" prefWidth="300.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Pane layoutX="26.0" layoutY="74.0" prefHeight="494.0" prefWidth="241.0" style="-fx-border-color: #000000;" />
+            <JFXButton buttonType="RAISED" layoutX="18.0" layoutY="582.0" onAction="#btnExitOnAction" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #fab1a0;" text="Log out" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/icon/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Text layoutX="60.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin" wrappingWidth="66.39999389648438">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="27.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/user.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="65.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" style="-fx-background-radius: 20;" text="DashBoard" textAlignment="CENTER" textFill="#a60000">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="65.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 20;" text="Employee" textAlignment="CENTER" textFill="#a60000">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="65.0" layoutY="255.0" mnemonicParsing="false" onAction="#btnEquipmentOnAction" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 20;" text="Equipment" textAlignment="CENTER" textFill="#a60000">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="66.0" layoutY="338.0" mnemonicParsing="false" onAction="#btnPaymentOnAction" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 20;" text="Payment" textAlignment="CENTER" textFill="#a60000">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="66.0" layoutY="416.0" mnemonicParsing="false" onAction="#btnGalleryOnAction" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 20;" text="Gallery" textAlignment="CENTER" textFill="#a60000">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="66.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnSalaryOnAction" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 20;" text="Salary" textAlignment="CENTER" textFill="#a60000">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

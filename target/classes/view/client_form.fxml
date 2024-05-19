@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studio.controller.ClientFormController">
+    <children>
+      <Pane layoutY="45.0" prefHeight="266.0" prefWidth="808.0">
+         <children>
+            <ImageView fitHeight="589.0" fitWidth="944.0" layoutX="-76.0" layoutY="-139.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/icon/S10.jpg" />
+               </image>
+            </ImageView>
+              <TextField fx:id="txtClientId" layoutX="108.0" layoutY="54.0" onAction="#txtSearchOnAction" onKeyReleased="#TextFieldKeyRelased" prefHeight="33.0" prefWidth="230.0" promptText="Customer Id" />
+              <TextField fx:id="txtTel" layoutX="108.0" layoutY="136.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="33.0" prefWidth="230.0" />
+              <Label layoutX="108.0" layoutY="36.0" text="Client Id*" textFill="#363232">
+                  <font>
+                      <Font name="System Bold" size="13.0" />
+                  </font>
+              </Label>
+              <Label layoutX="108.0" layoutY="120.0" text="Customer Tel*" textFill="#363232">
+                  <font>
+                      <Font name="System Bold" size="13.0" />
+                  </font>
+              </Label>
+              <TextField fx:id="txtUserId" layoutX="442.0" layoutY="136.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="33.0" prefWidth="230.0" />
+              <TextField fx:id="txtName" layoutX="442.0" layoutY="54.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="33.0" prefWidth="230.0" />
+              <Label layoutX="442.0" layoutY="36.0" text="Client Name*" textFill="#363232">
+                  <font>
+                      <Font name="System Bold" size="13.0" />
+                  </font>
+              </Label>
+              <Label layoutX="442.0" layoutY="120.0" text="User Id*" textFill="#363232">
+                  <font>
+                      <Font name="System Bold" size="13.0" />
+                  </font>
+              </Label>
+              <JFXButton fx:id="btnSaveClient" buttonType="RAISED" contentDisplay="RIGHT" layoutX="668.0" layoutY="203.0" onAction="#btnSaveOnAction" prefHeight="19.0" prefWidth="58.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+              <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="593.0" layoutY="203.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #e67e22;" text="Update" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+              <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="516.0" layoutY="203.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+              <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="440.0" layoutY="203.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+              </JFXButton>
+         </children>
+      </Pane>
+        <TableView fx:id="tblClient" layoutY="310.0" prefHeight="220.0" prefWidth="808.0">
+            <columns>
+                <TableColumn fx:id="colClientId" prefWidth="196.79998779296875" text="Client Id" />
+                <TableColumn fx:id="colName" prefWidth="208.800048828125" text="Name" />
+                <TableColumn fx:id="colTel" prefWidth="216.7999267578125" text="Tel" />
+                <TableColumn fx:id="colUserId" prefWidth="189.60003662109375" text="User Id" />
+            </columns>
+        </TableView>
+      <AnchorPane prefHeight="46.0" prefWidth="808.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Text fill="#3306ae" layoutX="333.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clients" textAlignment="CENTER" wrappingWidth="142.4000244140625">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

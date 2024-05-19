@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studio.controller.PaymentFormController">
+   <children>
+      <Pane layoutX="180.0" layoutY="46.0" prefHeight="484.0" prefWidth="530.0">
+         <children>
+            <ImageView blendMode="SRC_ATOP" fitHeight="274.0" fitWidth="907.0" layoutX="-279.0" layoutY="-14.0" opacity="0.5" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/icon/S11.jpeg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblPayment" layoutX="-180.0" layoutY="254.0" prefHeight="230.0" prefWidth="808.0">
+               <columns>
+                  <TableColumn fx:id="colPaymentId" prefWidth="121.5999755859375" text="Payment Id" />
+                  <TableColumn fx:id="colClientId" prefWidth="128.00006103515625" text="Client Id" />
+                  <TableColumn fx:id="colBookingId" prefWidth="140.800048828125" text="Booking Id" />
+                  <TableColumn fx:id="colAmount" prefWidth="139.20001220703125" text="Amount" />
+                  <TableColumn fx:id="colDate" prefWidth="140.0" text="Date" />
+                  <TableColumn fx:id="colAction" prefWidth="142.40008544921875" text="Action" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtPaymentId" layoutX="-55.0" layoutY="56.0" onAction="#txtSearchOnAction" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="-55.0" layoutY="36.0" text="Payment Id*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="299.0" layoutY="36.0" text="Client Id*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtClientId" layoutX="299.0" layoutY="56.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="-55.0" layoutY="111.0" text="Booking Id*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtBookingId" layoutX="-55.0" layoutY="128.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="299.0" layoutY="111.0" text="Amount*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtAmount" layoutX="299.0" layoutY="128.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <JFXButton fx:id="btnSavePayment" buttonType="RAISED" layoutX="484.0" layoutY="204.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="61.0" style="-fx-background-color: #2980b9;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="419.0" layoutY="204.0" onAction="#btnUpdateOnAction" style="-fx-background-color: lightgreen;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="299.0" layoutY="204.0" onAction="#btnClearOnAction" style="-fx-background-color: yellow;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="353.0" layoutY="204.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="-55.0" layoutY="177.0" text="Date*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtDate" layoutX="-55.0" layoutY="194.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="45.0" prefWidth="808.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Text fill="#3306ae" layoutX="333.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payments" textAlignment="CENTER" wrappingWidth="142.4000244140625">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="320.0" prefWidth="607.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studio.controller.LoginFormController">
+    <children>
+        <Label layoutX="427.0" layoutY="27.0" text="Login" textFill="#636e72">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtUserId" layoutX="329.0" layoutY="103.0" prefHeight="42.0" prefWidth="230.0" promptText="user id" />
+        <TextField fx:id="txtPassword" layoutX="329.0" layoutY="179.0" prefHeight="42.0" prefWidth="230.0" promptText="password" />
+        <JFXButton buttonType="RAISED" layoutX="329.0" layoutY="245.0" onAction="#btnLoginOnAction" prefHeight="32.0" prefWidth="230.0" style="-fx-background-color: #a29bfe;" text="Login" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../asserts/icon/login.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <Label layoutX="329.0" layoutY="302.0" text="Don't have an account?" textFill="#636e72" />
+        <Hyperlink layoutX="464.0" layoutY="299.0" onAction="#linkRegistrationOnAction" prefHeight="24.0" prefWidth="101.0" text="Register on here" />
+        <Line endX="124.0" layoutX="378.0" layoutY="56.0" startX="9.399978637695312" startY="-7.62939453125E-6" stroke="#636e72" />
+        <Label layoutX="330.0" layoutY="81.0" text="user id:" textFill="#57606f" />
+        <Label layoutX="329.0" layoutY="160.0" text="password" textFill="#57606f" />
+      <ImageView fitHeight="367.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icon/Loginpagephoto.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

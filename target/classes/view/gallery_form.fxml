@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studio.controller.GalleryFormController">
+   <children>
+      <Pane layoutX="180.0" layoutY="46.0" prefHeight="484.0" prefWidth="530.0">
+         <children>
+            <ImageView blendMode="SRC_ATOP" fitHeight="416.0" fitWidth="808.0" layoutX="-180.0" opacity="0.6" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/icon/S6.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblGallery" layoutX="-180.0" layoutY="254.0" prefHeight="230.0" prefWidth="808.0">
+               <columns>
+                  <TableColumn fx:id="colGalleryId" prefWidth="121.60003662109375" text="Gallery Id" />
+                  <TableColumn fx:id="colName" prefWidth="171.199951171875" text="Name" />
+                  <TableColumn fx:id="colDate" prefWidth="117.60003662109375" text="Date" />
+                  <TableColumn fx:id="colDescription" prefWidth="186.39996337890625" text="Description" />
+                  <TableColumn fx:id="colClientId" prefWidth="116.7999267578125" text="Client Id" />
+                  <TableColumn fx:id="colAction" prefWidth="99.20013427734375" text="Action" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtGalleryId" layoutX="-69.0" layoutY="40.0" onAction="#txtSearchOnAction" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="-69.0" layoutY="20.0" text="Gallery Id*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="270.0" layoutY="20.0" text="Name*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtName" layoutX="270.0" layoutY="40.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="-69.0" layoutY="99.0" text="Date*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtDate" layoutX="-69.0" layoutY="116.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="270.0" layoutY="99.0" text="Description*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtDescription" layoutX="270.0" layoutY="116.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <JFXButton fx:id="btnSaveGallery" buttonType="RAISED" layoutX="453.0" layoutY="207.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="61.0" style="-fx-background-color: #2980b9;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="374.0" layoutY="207.0" onAction="#btnUpdateOnAction" style="-fx-background-color: lightgreen;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="304.0" layoutY="207.0" onAction="#btnClearOnAction" style="-fx-background-color: yellow;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="-69.0" layoutY="168.0" text="Client Id*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtClientId" layoutX="-69.0" layoutY="186.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="46.0" prefWidth="808.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Text fill="#3306ae" layoutX="333.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Galleries" textAlignment="CENTER" wrappingWidth="142.4000244140625">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

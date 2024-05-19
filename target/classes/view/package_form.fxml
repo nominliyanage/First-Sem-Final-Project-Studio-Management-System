@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="530.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.studio.controller.PackageFormController">
+   <children>
+      <Pane layoutX="180.0" layoutY="46.0" prefHeight="484.0" prefWidth="530.0">
+         <children>
+            <ImageView blendMode="SRC_ATOP" fitHeight="307.0" fitWidth="1005.0" layoutX="-377.0" layoutY="-31.0" opacity="0.7" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/icon/S7.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tblPackage" layoutX="-180.0" layoutY="254.0" prefHeight="230.0" prefWidth="808.0">
+               <columns>
+                  <TableColumn fx:id="colPackageId" prefWidth="100.7999496459961" text="Package Id" />
+                  <TableColumn fx:id="colPackageName" prefWidth="198.40003204345703" text="Package Name" />
+                  <TableColumn fx:id="colPrice" prefWidth="124.79998779296875" text="Price" />
+                  <TableColumn fx:id="colIncludes" prefWidth="268.7999572753906" text="Includes" />
+                  <TableColumn fx:id="colAction" prefWidth="120.79998779296875" text="Action" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtPackageId" layoutX="-66.0" layoutY="63.0" onAction="#txtSearchOnAction" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="-66.0" layoutY="43.0" text="Package Id*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="289.0" layoutY="43.0" text="Package Name*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtPackageName" layoutX="289.0" layoutY="63.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="-66.0" layoutY="129.0" text="Price*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtPrice" layoutX="-66.0" layoutY="146.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <Label layoutX="289.0" layoutY="129.0" prefHeight="17.0" prefWidth="82.0" text="Includes*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtIncludes" layoutX="289.0" layoutY="146.0" onKeyReleased="#TextFieldKeyRelased" prefHeight="35.0" prefWidth="245.0" />
+            <JFXButton fx:id="btnSavePackage" buttonType="RAISED" layoutX="473.0" layoutY="208.0" onAction="#btnSaveOnAction" prefHeight="24.0" prefWidth="61.0" style="-fx-background-color: #2980b9;" text="Save">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="405.0" layoutY="208.0" onAction="#btnUpdateOnAction" style="-fx-background-color: lightgreen;" text="Update">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="280.0" layoutY="208.0" onAction="#btnClearOnAction" style="-fx-background-color: yellow;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="336.0" layoutY="208.0" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <AnchorPane layoutX="-180.0" layoutY="-46.0" prefHeight="46.0" prefWidth="808.0" style="-fx-background-color: #bdc3c7;">
+               <children>
+                  <Text fill="#3306ae" layoutX="333.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Packages" textAlignment="CENTER" wrappingWidth="142.4000244140625">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
